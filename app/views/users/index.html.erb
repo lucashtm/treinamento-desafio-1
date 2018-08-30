@@ -1,0 +1,4 @@
+<h1>CHOOSE A USER</h1>
+<% @users.each do |user| %>
+  <%= link_to  "#{user.name}", session_path(user_id: user.id), method: :post %>
+<% end %>

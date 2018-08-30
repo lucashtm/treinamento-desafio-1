@@ -1,5 +1,8 @@
 <h1>CHOOSE ITEMS</h1>
-<h2 class="user">Hello, <%= current_user.name %></h2>
+<div class="user">
+  <h2>Hello, <%= current_user.name %></h2>
+  <%= link_to  "YOUR CART", edit_cart_path %>
+</div>
 <% @products.each do |product|%>
   <div class="product-brief" id="<%= "product-#{product.id}" %>">
     <%= render_product(product) %>

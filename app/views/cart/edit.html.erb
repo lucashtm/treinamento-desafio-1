@@ -1,0 +1,7 @@
+<h1>YOUR CART</h1>
+
+<ul>
+  <% current_user.items.each do |item| %>
+    <li><span><%= item.product.title %></span> <span>x<%= item.quantity %></span></li>
+  <% end %>
+</ul>

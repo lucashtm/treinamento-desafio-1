@@ -1,0 +1,7 @@
+<h1>CHOOSE ITEMS</h1>
+<% @products.each do |product|%>
+  <div class="product-brief" id="<%= "product-#{product.id}" %>">
+    <%= render_product(product) %>
+    <%= add_to_cart(product) %>
+  </div>
+<% end%>

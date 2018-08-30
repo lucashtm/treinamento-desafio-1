@@ -1,0 +1,23 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.out {
+  color: rgb(209, 38, 32);
+}
+
+.product-brief {
+  border-bottom: 1px #c1c1c1 solid;
+  padding-bottom: 8px;
+}
+
+.add-to-cart {
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(96, 96, 230);
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+.add-to-cart:visited {
+  color: white;
+}

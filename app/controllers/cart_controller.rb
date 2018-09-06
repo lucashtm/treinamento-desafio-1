@@ -8,7 +8,9 @@ class CartController < ApplicationController
       item.quantity += 1
       item.save
     else
-      current_user.items << Item.create(product_id: params[:product_id], quantity: 1)
+      item = Item.create(product_id: params[:product_id], quantity: 1)
+      current_user.items << item
+      item.save
     end
   end
 

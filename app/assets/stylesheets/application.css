@@ -16,6 +16,8 @@
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
 html {
@@ -28,4 +30,8 @@ html {
   right: 20px;
   top: 20px;
   margin: 0;
+}
+
+.cart-list li {
+  margin: 20px 0;
 }

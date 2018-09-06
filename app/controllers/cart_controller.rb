@@ -3,7 +3,6 @@ class CartController < ApplicationController
   end
 
   def update
-    debugger
     if item_in_cart?
       item = current_user.items.by_product_id(params[:product_id]).first
       item.quantity += 1
@@ -19,7 +18,7 @@ class CartController < ApplicationController
   private
 
   def item_in_cart?
-    params[:product_id].in?(user_items_products)
+    params[:product_id].to_i.in?(user_items_products)
   end
 
   def user_items_products

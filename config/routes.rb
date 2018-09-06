@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'users#index'
-  resource :session, only: :create
+  root 'products#index'
+  resource :session, only: [:create, :destroy]
   resource :cart, only: [:edit, :update], controller: 'cart'
   resources :users, only: :index
   resources :products, only: [:index, :show, :update]

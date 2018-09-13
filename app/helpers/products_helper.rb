@@ -9,6 +9,8 @@ module ProductsHelper
   end
 
   def add_to_cart(product)
-    link_to 'ADD TO CART', cart_path(product_id: product.id), remote: true, method: :patch, class: 'add-to-cart' unless product.quantity.zero?
+    options = { remote: true, method: :patch, class: 'add-to-cart' }
+    path = cart_path(product_id: product.id, op: :add)
+    link_to 'ADD TO CART', path, options unless product.quantity.zero?
   end
 end

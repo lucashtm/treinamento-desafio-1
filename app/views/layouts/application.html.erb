@@ -11,9 +11,10 @@
 
   <body>
     <% if current_user %>
+      <%= link_to 'HOME', root_path %>
       <div class="user">
         <h2>Hello, <%= current_user.name %></h2>
-        <%= link_to  "YOUR CART", edit_cart_path %>
+        <%= link_to  "YOUR CART", edit_cart_path %> |
         <%= link_to "LOG OUT", session_path, method: :delete %>
       </div>
     <% end %>

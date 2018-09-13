@@ -1,0 +1,15 @@
+<%= javascript_tag do %>
+  var minus = document.getElementById('minus'+<%= id %>);
+  var plus = document.getElementById('plus'+<%= id %>);
+  var quantity = document.getElementById('quantity'+<%= id %>);
+
+  minus.addEventListener('click', function(){
+    curr = parseInt(quantity.innerHTML);
+    if(curr > 0)
+      quantity.innerHTML = curr-1;
+  });
+  plus.addEventListener('click', function(){
+    curr = parseInt(quantity.innerHTML);
+    quantity.innerHTML = curr+1;
+  });
+<% end %>

@@ -35,3 +35,13 @@ html {
 .cart-list li {
   margin: 20px 0;
 }
+
+.item-quantity {
+  padding: 5px;
+  border: 1px solid rgb(48, 48, 48);
+  border-radius: 3px;
+}
+
+.item-quantity span a {
+  border: none;
+}

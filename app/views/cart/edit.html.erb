@@ -2,6 +2,16 @@
 
 <ul class="cart-list">
   <% current_user.items.each do |item| %>
-    <li><span><%= item.product.title %></span> <span>x<%= item.quantity %></span><%= add_item %><%= remove_item %></li>
+    <li>
+      <span><%= item.product.title %></span>
+      <span class="item-quantity">
+        <span id="minus<%= item.id %>"><%= remove_item(item.product.id) %></span>
+        <span id="quantity<%= item.id %>"><%= item.quantity %></span>
+        <span id="plus<%= item.id %>"><%= add_item(item.product.id) %></span>
+      </span>
+      <%= render 'update_quantity', id: item.id %>
+    </li>
   <% end %>
+
+  <%# javascript_include_tag 'update_quantity' %>
 </ul>

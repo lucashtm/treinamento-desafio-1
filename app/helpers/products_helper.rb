@@ -1,10 +1,11 @@
 module ProductsHelper
   def render_product(product)
     tag = product.quantity.zero? ? 'del' : 'span'
-    out_of_stock = product.quantity.zero? ? '<h4 class="out">OUT OF STOCK</h4>' : ''
+    stock = product.quantity.zero? ? '<h4 class="out">OUT OF STOCK</h4>' : "<h4>#{product.quantity} in stock</h4>"
     title = "<h2><#{tag}>#{product.title}</#{tag}></h2>"
+    price = "<h4>R$ #{'%.2f' % product.price}</h4>"
     description = "<p><#{tag}>#{product.description}</#{tag}></p>"
-    data = title+description+out_of_stock
+    data = title+description+stock+price
     data.html_safe
   end
 

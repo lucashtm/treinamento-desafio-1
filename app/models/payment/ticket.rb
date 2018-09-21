@@ -1,6 +1,4 @@
-module Payment
-  class Ticket < Method
-    def self.confirm
-    end
+class Payment::Ticket < Method
+  def self.confirm
   end
 end

@@ -8,6 +8,14 @@ class Item < ApplicationRecord
     joins(:product).where(products: {id: product_id})
   end
 
+  scope :in_stock, -> do
+    joins(:product).where('products.quantity >= items.quantity')
+  end
+
+  scope :not_in_stock, -> do
+    joins(:product).where.not('products.quantity >= items.quantity')
+  end
+
   private
 
   def destroy_if_none

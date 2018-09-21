@@ -12,6 +12,10 @@
   <body>
     <% if current_user %>
       <%= link_to 'HOME', root_path %>
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash #{key}" %>
+      <% end %>
+
       <div class="user">
         <h2>Hello, <%= current_user.name %></h2>
         <%= link_to  "YOUR CART", edit_cart_path %> |

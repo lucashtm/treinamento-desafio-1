@@ -45,3 +45,19 @@ html {
 .item-quantity span a {
   border: none;
 }
+
+.flash {
+  border-radius: 5px;
+  padding: 10px 10px;
+  width: 500px;
+}
+
+.success {
+  border: 1px solid green;
+  color: green;
+}
+
+.error {
+  border: 1px solid red;
+  color: red;
+}

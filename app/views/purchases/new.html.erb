@@ -1,0 +1,6 @@
+<h1>Choose Payment Method</h1>
+<%= form_tag :purchases do |f| %>
+  <% methods = Payment::MethodProvider::METHODS.keys.map { |m| [m.to_s.humanize, m] } %>
+  <%= select :purchase, :payment_method, methods %>
+  <%= submit_tag 'Confirm Method' %>
+<% end %>

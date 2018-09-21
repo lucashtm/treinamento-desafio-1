@@ -1,5 +1,7 @@
 <h1>YOUR CART</h1>
-
+<% if current_user.items.length > 0 %>
+  <%= link_to 'Buy', new_purchase_path %>
+<% end %>
 <ul class="cart-list">
   <% current_user.items.each do |item| %>
     <li>
@@ -13,5 +15,4 @@
     </li>
   <% end %>
 
-  <%# javascript_include_tag 'update_quantity' %>
 </ul>
